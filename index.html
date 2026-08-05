@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriShield AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🌾 AgriShield AI</h1>
+
+    <p>AI-Powered Pest Outbreak Prediction & Early Warning Network</p>
+    <p id="datetime" style="color:gray; font-size:15px;"></p>
+    <p style="color:green; font-weight:bold;">
+🟢 AI System Status: Ready for Prediction
+</p>
+
+    <hr><br>
+
+    <label><b>Upload Crop Image</b></label><br>
+    <input type="file" id="image">
+    <br><br>
+
+<img id="preview" width="250" style="display:none; margin-top:20px; border-radius:10px;">
+
+    <br><br>
+
+    <label><b>Select Crop</b></label><br>
+
+    <select id="crop">
+        <option>Rice</option>
+        <option>Maize</option>
+        <option>Cotton</option>
+        <option>Wheat</option>
+        <option>Tomato</option>
+    </select>
+
+    <br><br>
+
+    <label><b>Enter Location</b></label><br>
+
+    <input type="text" id="location" placeholder="Enter Village / City">
+
+    <br><br>
+
+    <button onclick="predict()">
+        Predict Pest
+    </button>
+    
+    <h2>🌦 Weather Information</h2>
+
+<p>🌡 Temperature: <span id="temp">31°C</span></p>
+
+<p>💧 Humidity: <span id="humidity">72%</span></p>
+
+<p>🌧 Rainfall: <span id="rain">15 mm</span></p>
+<p style="color:green;">
+✅ Crop Health Status: Moderately Healthy
+</p>
+
+<hr>
+<div id="loading" style="display:none; color:green; font-weight:bold; margin:15px;">
+🤖 AI is analyzing the crop image...
+</div>
+    <div id="result" style="display:none; margin-top:25px; background:#f4fff4; padding:15px; border-radius:10px;">
+
+<h2>🌾 Prediction Result</h2>
+
+<p><b>🐛 Pest:</b> <span id="pest">-</span></p>
+
+<p><b>⚠ Risk Level:</b> <span id="risk">-</span></p>
+
+<p><b>💊 Recommendation:</b> <span id="recommendation">-</span></p>
+<p><b>🤖 AI Confidence:</b> <span id="confidence">-</span></p>
+
+<p><b>📅 Next Inspection:</b> After 2 Days</p>
+
+<br><br>
+
+<button onclick="alert('Report Downloaded Successfully!')">
+📄 Download Report
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
